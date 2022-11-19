@@ -1,253 +1,198 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/favicon.ico">
-
-    <title>Dashboard | Whales Corp</title>
-{{--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />--}}
-{{--    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js" integrity="sha512-Tn2m0TIpgVyTzzvmxLNuqbSJH3JP8jm+Cy3hvHrW7ndTDcJ1w5mBiksqDBb8GpE2ksktFvDB/ykZ0mDpsZj20w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>--}}
-
-    <!-- Vendors Style-->
-    <link rel="stylesheet" href="{{ asset('css/vendors_css.css') }}">
-
-    <!-- Style-->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/skin_color.css') }}">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>User Dashboard</title>
+    <!-- Iconic Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="{{ asset('assets/css/all.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/cryptocoins.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/cryptocoins-colors.css') }}">
+    <!-- Bootstrap core CSS -->
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link href="{{ asset('assets/css/jquery-ui.min.css') }}" rel="stylesheet">
+    <!-- Page Specific CSS (Slick Slider.css) -->
+    <link href="{{ asset('assets/css/slick.css') }}" rel="stylesheet">
+    <!-- Mystic styles -->
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.ico">
 
 </head>
 
-<body class="hold-transition dark-skin sidebar-mini theme-primary fixed">
-
-<div class="wrapper">
-
-    <header class="main-header">
-        <div class="d-flex align-items-center logo-box pl-20">
-            <a href="#" class="waves-effect waves-light nav-link rounded d-none d-md-inline-block push-btn" data-toggle="push-menu" role="button">
-                <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/collapse.svg" class="img-fluid svg-icon" alt="">
-            </a>
-            <!-- Logo -->
-            <a href="{{ route('index') }}" class="logo">
-                <!-- logo-->
-                <div class="logo-lg">
-                    <h3 class="mt-3" style="font-weight: bolder; color: #1288c9 !important">Whales Corp</h3>
-
-                </div>
-            </a>
-        </div>
-        <!-- Header Navbar -->
-        <nav class="navbar navbar-static-top pl-10">
-            <!-- Sidebar toggle button-->
-            <div class="app-menu">
-                <ul class="header-megamenu nav">
-                    <li class="btn-group nav-item d-md-none">
-                        <a href="#" class="waves-effect waves-light nav-link rounded push-btn" data-toggle="push-menu" role="button">
-                            <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/collapse.svg" class="img-fluid svg-icon" alt="">
-                        </a>
-                    </li>
-                    <li class="btn-group nav-item">
-                        <a href="#" data-provide="fullscreen" class="waves-effect waves-light nav-link rounded full-screen" title="Full Screen">
-                            <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/fullscreen.svg" class="img-fluid svg-icon" alt="">
-                        </a>
-                    </li>
-
-                </ul>
-            </div>
-
-            <div class="navbar-custom-menu r-side">
-                <ul class="nav navbar-nav">
-                    <!-- Notifications -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="Notifications">
-                            <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/notifications.svg" class="img-fluid svg-icon" alt="">
-                        </a>
-                        <ul class="dropdown-menu animated bounceIn">
-
-                            <li class="header">
-                                <div class="p-20">
-                                    <div class="flexbox">
-                                        <div>
-                                            <h4 class="mb-0 mt-0">Notifications</h4>
-                                        </div>
-                                        <div>
-                                            <a href="#" class="text-danger">Clear All</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                        </ul>
-                    </li>
-
-                    <!-- User Account-->
-                    <li class="dropdown user user-menu">
-                        <a href="#" class="waves-effect waves-light dropdown-toggle" data-toggle="dropdown" title="User">
-                            <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/user.svg" class="rounded svg-icon" alt="" />
-                        </a>
-                        <ul class="dropdown-menu animated flipInX">
-                            <!-- User image -->
-                            <li class="user-header bg-img" style="background-image: url(https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/user-info.jpg)" data-overlay="3">
-                                <div class="flexbox align-self-center">
-                                    <img src="" class="float-left rounded-circle" alt="User Image">
-                                    <h4 class="user-name align-self-center">
-                                        <span>{{ auth()->user()->name }}</span>
-                                        <small>{{ auth()->user()->email }}</small>
-                                    </h4>
-                                </div>
-                            </li>
-                            <!-- Menu Body -->
-                            <li class="user-body">
-                                <a class="dropdown-item" href="{{ route('user.profile') }}"><i class="ion ion-person"></i> My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ion ion-email-unread"></i> Inbox</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('user.editProfile') }}"><i class="ion ion-settings"></i> Account Setting</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    <i class="ion-log-out"></i>{{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Left side column. contains the logo and sidebar -->
-    <aside class="main-sidebar">
-        <!-- sidebar-->
-        <section class="sidebar position-relative">
-            <div class="multinav">
-                <div class="multinav-scroll" style="height: 100%;">
-                    <!-- sidebar menu-->
-                    <ul class="sidebar-menu" data-widget="tree">
-
-                        <li class="">
-                            <a href="{{ route('user.dashboard') }}">
-                                <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/sidebar-menu/dashboard.svg" class="svg-icon" alt="">
-                                <span>Dashboard</span>
-                            </a>
-                        </li>
-
-                        <li class="">
-                            <a href="{{ route('user.deposit') }}">
-                                <i class="fa fa-arrow-circle-down text-primary"></i>
-                                <span>Deposit</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.withdraw') }}">
-                                <i class="fa fa-arrow-circle-up text-primary"></i>
-                                <span>Withdraw</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.trade') }}">
-                                <i class="fa fa-area-chart text-primary"></i>
-                                <span>Trade Room</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.sub.plans') }}">
-                                <i class="fa fa-dollar text-primary"></i>
-                                <span>Subscribe</span>
-                            </a>
-                        </li>
-                        <li class="header">History </li>
-                        <li class="treeview">
-                            <a href="#">
-                                <img src="https://crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/images/svg-icon/sidebar-menu/authentication.svg" class="svg-icon" alt="">
-                                <span>Transactions</span>
-                                <span class="pull-right-container">
-                                  <i class="fa fa-angle-right pull-right"></i>
-                                </span>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li><a href="{{ route('user.deposit.transactions') }}"><i class="ti-more"></i>Deposits</a></li>
-                                <li><a href="{{ route('user.withdraw.transactions') }}"><i class="ti-more"></i>Withdrawals</a></li>
-{{--                                <li><a href="auth_register.html"><i class="ti-more"></i></a></li>--}}
-                            </ul>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.trade.history') }}">
-                                <i class="fa fa-history text-primary"></i>
-                                <span>Trade History</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.sub.history') }}">
-                                <i class="fa fa-anchor text-primary"></i>
-                                <span>Subscriptions</span>
-                            </a>
-                        </li>
+<body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
 
 
-                        <li class="header">User</li>
-                        <li class="">
-                            <a href="{{ route('user.profile') }}">
-                                <i class="fa fa-user-circle text-primary"></i>
-                                <span>Profile</span>
-                            </a>
-                        </li>
-                        <li class="">
-                            <a href="{{ route('user.message.index') }}">
-                                <i class="fa fa-envelope text-primary"></i>
-                                <span>Messages <span class="badge badge-danger">{{ auth()->user()->messageCount() }}</span></span>
-                            </a>
-                        </li>
-{{--                        <li class="">--}}
-{{--                            <a href="{{ route('user.withdraw') }}">--}}
-{{--                                <i class="fa fa-shield text-primary"></i>--}}
-{{--                                <span>Security</span>--}}
-{{--                            </a>--}}
-{{--                        </li>--}}
 
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </aside>
-
-    <!-- Content Wrapper. Contains page content -->
-   @yield('content')
-    <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="pull-right d-none d-sm-inline-block">
-
-        </div>
-        &copy; 2020 <a href="https://www.Whales Corp.co/">Whales Corp</a>. All Rights Reserved.
-    </footer>
-
-
-    <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
-    <div class="control-sidebar-bg"></div>
-
+<!-- Setting Panel -->
+<div class="ms-toggler ms-settings-toggle ms-d-block-lg">
+    <i class="flaticon-paint"></i>
 </div>
-<!-- ./wrapper -->
-
-<!-- Vendor JS -->
-<script src="{{ asset('js/vendors.min.js') }}"></script>
 
 
-<!-- Crypto Tokenizer Admin App -->
-<script src="{{ asset('js/template.js') }}"></script>
-<script src="{{ asset('js/pages/dashboard10.js') }}"></script>
-<script src="{{ asset('js/demo.js') }}"></script>
-<script src="//code.tidio.co/a6ctwkykhhr6qctwa83f6rowtjz4ue38.js" async></script>
-{{--<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="b8ebdac5-f32d-49fd-be44-618688cfd7c2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>--}}
+<!-- Preloader -->
+<div id="preloader-wrap" style="background-color:#274E82">
+
+    <div class="spinner spinner-8">
+
+
+        <div class="ms-circle1 ms-child"></div>
+        <div class="ms-circle2 ms-child"></div>
+        <div class="ms-circle3 ms-child"></div>
+        <div class="ms-circle4 ms-child"></div>
+        <div class="ms-circle5 ms-child"></div>
+        <div class="ms-circle6 ms-child"></div>
+        <div class="ms-circle7 ms-child"></div>
+        <div class="ms-circle8 ms-child"></div>
+        <div class="ms-circle9 ms-child"></div>
+        <div class="ms-circle10 ms-child"></div>
+        <div class="ms-circle11 ms-child"></div>
+        <div class="ms-circle12 ms-child"></div>
+    </div>
+</div>
+
+<!-- Overlays -->
+<div class="ms-aside-overlay ms-overlay-left ms-toggler" data-target="#ms-side-nav" data-toggle="slideLeft"></div>
+<div class="ms-aside-overlay ms-overlay-right ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"></div>
+
+<!-- Sidebar Navigation Left -->
+<aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left"  style="background-color:#274E82">
+
+    <!-- Logo -->
+    <div class="logo-sn ms-d-block-lg" style="background-color:#fff">
+        <a class="pl-0 ml-0 text-center" href="index.php" style="color:White;font-size:20px;font-weight:bolder">
+{{--            <img src='https://www.speedexcapitals.net/logo.png' style='width:250px'/>--}}
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion" style="background-color:#274E82">
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="index.php">
+                <span style="color:white"><i class="fa fa-home" style="font-size:17px"></i>Dashboard</span>
+            </a>
+        </li>
+
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="LIVE-trading.php">
+                <span style="color:white"><i class="fa fa-window-maximize" style="font-size:17px"></i>Live Trading</span>
+            </a>
+        </li>
+
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="signal.php">
+                <span style="color:white"><i class="fa fa-window-maximize" style="font-size:17px"></i>Live Trading Signals</span>
+            </a>
+        </li>
+
+
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="account.php">
+                <span style="color:white"><i class="fa fa-user-circle" style="font-size:17px"></i>Account Profile</span>
+            </a>
+        </li>
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="deposit.php">
+                <span style="color:white"><i class="fa fa-credit-card" style="font-size:17px"></i>  Make Deposits</span>
+            </a>
+        </li>
+
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="tradehistory.php">
+                <span style="color:white"><i class="fa fa-clock" style="font-size:17px"></i>  Trade History</span>
+            </a>
+        </li>
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="withdraw.php">
+                <span style="color:white"><i class="fa fa-suitcase" style="font-size:17px"></i>  Withdrawals</span>
+            </a>
+        </li>
+
+        <li class="menu-item" style="padding-bottom:8px">
+            <a href="support.php">
+                <span style="color:white"><i class="fa fa-envelope" style="font-size:17px"></i> Our Support</span>
+            </a>
+        </li>
+
+
+
+        <li class="menu-item" style="padding-bottom:8px;">
+            <a href="../index.php?log=1"  >
+                <span style="color:white;text-align:Center"> Log Out</span>
+            </a>
+        </li>
+
+
+        <!-- /Apps -->
+    </ul>
+
+
+</aside>
+
+
+
+<!-- Main Content -->
+@yield('content')
+
+<!-- Quick bar -->
+<aside id="ms-quick-bar" class="ms-quick-bar fixed ms-d-block-lg" style="background-color:#262626">
+
+
+    <div class="ms-configure-qa" data-toggle="tooltip" data-placement="left" title="Chat With Us">
+
+
+    </div>
+
+
+
+
+    </div>
+
+</aside>
+
+<!-- MODALS -->
+
+
+
+
+<!-- SCRIPTS -->
+<!-- Global Required Scripts Start -->
+<script src="{{ asset('assets/js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('assets/js/popper.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/perfect-scrollbar.js') }}"> </script>
+<script src="{{ asset('assets/js/jquery-ui.min.js') }}"> </script>
+<!-- Global Required Scripts End -->
+
+<!-- Page Specific Scripts Start -->
+<script src="{{ asset('assets/js/slick.min.js') }}"> </script>
+<script src="{{ asset('assets/js/moment.js') }}"> </script>
+<script src="{{ asset('assets/js/jquery.webticker.min.js') }}"> </script>
+<script src="{{ asset('assets/js/Chart.bundle.min.js') }}"> </script>
+<script src="{{ asset('assets/js/Chart.Financial.js') }}"> </script>
+<script src="{{ asset('assets/js/cryptocurrency.js') }}"> </script>
+<!-- Page Specific Scripts Finish -->
+
+<!-- Mystic core JavaScript -->
+<script src="{{ asset('assets/js/framework.js') }}"></script>
+
+<!-- Settings -->
+<script src="{{ asset('assets/js/settings.js') }}"></script>
+
 </body>
 
-<!-- Mirrored from crypto-tokenizer-admin-dashboard.multipurposethemes.com/bs4/main-dark/index10.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 18 Jul 2022 20:51:19 GMT -->
 </html>
