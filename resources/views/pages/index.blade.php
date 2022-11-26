@@ -684,11 +684,11 @@
     <!-- NAVIGATION WIDGET ACTIONS -->
     <div class="navigation-widget-actions">
         <!-- BUTTON -->
-        <a class="button register-button" href="https://hub.ellev8.com/register/">Register</a>
+        <a class="button register-button" href="{{ route('register') }}">Register</a>
         <!-- /BUTTON -->
 
         <!-- BUTTON -->
-        <a class="button primary login-button" href="https://hub.ellev8.com/wp-login.php">Login</a>
+        <a class="button primary login-button" href="{{ route('register') }}">Login</a>
         <!-- /BUTTON -->
     </div>
     <!-- /NAVIGATION WIDGET ACTIONS -->

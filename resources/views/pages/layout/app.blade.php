@@ -160,33 +160,6 @@
     </script>
 
 
-
-
-    <!--     <script type="text/javascript">
-            (function() {
-              var didInit = false;
-              function initMunchkin() {
-                if(didInit === false) {
-                  didInit = true;
-                  Munchkin.init('079-WFQ-812', {"wsInfo":"j1RQ"});
-                }
-              }
-              var s = document.createElement('script');
-              s.type = 'text/javascript';
-              s.async = true;
-              s.src = '//munchkin.marketo.net/munchkin.js';
-              s.onreadystatechange = function() {
-                if (this.readyState == 'complete' || this.readyState == 'loaded') {
-                  initMunchkin();
-                }
-              };
-              s.onload = initMunchkin;
-              document.getElementsByTagName('head')[0].appendChild(s);
-            })();
-            </script> -->
-
-
-
     <script async src="{{ asset('assets/home/cdn-cgi/bm/cv/669835187/api.html') }}"></script></head>
 <body class="home page-template page-template-template_home page-template-template_home-php page page-id-5">
 
@@ -227,8 +200,8 @@
                                 <div class="header_menu_links">
                                     <h2>Trading</h2>
                                     <p>With over 300+ instruments such as FX pairs, Indices, Commodities and Share CFDs, trade your way with Whales Corp.</p>
-                                    <a href="register" class="live_link">open LIVE Account</a>
-                                    <a href="login">Login</a>
+                                    <a href="{{ route('register') }}" class="live_link">open LIVE Account</a>
+                                    <a href="{{ route('login') }}">Login</a>
                                 </div>
                                 <div class="sub_menu_box">
                                     <ul class="sub_menu">
@@ -273,8 +246,8 @@
                                 <div class="header_menu_links">
                                     <h2>Clients</h2>
                                     <p>Whales Corp offers clients award-winning customer service, a range of promotions, educational resources and trading tools.</p>
-                                    <a href="register" class="live_link">open LIVE Account</a>
-                                    <a href="login" class="demo_link">open demo Account</a>
+                                    <a href="{{ route('register') }}" class="live_link">open LIVE Account</a>
+                                    <a href="{{ route('login') }}" class="demo_link">open demo Account</a>
                                 </div>
                                 <div class="sub_menu_box">
                                     <ul class="sub_menu">
@@ -310,8 +283,8 @@
                                 <div class="header_menu_links">
                                     <h2>About Us</h2>
                                     <p>Whales Corp is a leading regulated Stock & Cryptocurrency broker offering traders around the world access to global markets.</p>
-                                    <a href="register" class="live_link">open LIVE Account</a>
-                                    <a href="login" class="demo_link">open demo Account</a>
+                                    <a href="{{ route('register') }}" class="live_link">open LIVE Account</a>
+                                    <a href="{{ route('login') }}" class="demo_link">open demo Account</a>
                                 </div>
                                 <div class="sub_menu_box">
                                     <ul class="sub_menu">
@@ -482,8 +455,8 @@
                 <img src="{{ asset('img/logo.PNG') }}" alt="" />
             </a>
             <div class="reg_link">
-                <a class="btn_live" href="register" >Live Account</a>
-                <a class="btn_demo" href="login"  rel="nofollow">Login</a>
+                <a class="btn_live" href="{{ route('register') }}" >Live Account</a>
+                <a class="btn_demo" href="{{ route('login') }}"  rel="nofollow">Login</a>
             </div>
             <div class="clear"></div>
         </div>
