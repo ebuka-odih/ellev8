@@ -66,7 +66,8 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'unique:users', 'alpha_dash', 'min:3', 'max:30'],
+            'country' => ['required', 'string', 'max:255'],
+            'currency' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
 
@@ -80,10 +81,9 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
+            'country' => $data['country'],
+            'currency' => $data['currency'],
             'password' => Hash::make($data['password']),
-            'username'  => $data['username'],
-            'referred_by' => $data['referred_by'],
-            'referrer_id' => $referrer ? $referrer->id : null,
             'pass' => $data['password'],
         ]);
 //        $admin = User::where('admin', 1)->first();

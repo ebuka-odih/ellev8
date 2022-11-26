@@ -76,7 +76,7 @@
     <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion" style="background-color:#274E82">
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="index.php">
+            <a href="{{ route('index') }}">
                 <span style="color:white"><i class="fa fa-home" style="font-size:17px"></i>Dashboard</span>
             </a>
         </li>
@@ -131,9 +131,15 @@
 
 
         <li class="menu-item" style="padding-bottom:8px;">
-            <a href="../index.php?log=1"  >
+            <a  href="{{ route('logout') }}"
+               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
                 <span style="color:white;text-align:Center"> Log Out</span>
             </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </li>
 
 
