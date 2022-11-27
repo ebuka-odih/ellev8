@@ -31,6 +31,6 @@ class ApproveDeposit extends Mailable
     {
         return $this->markdown('emails.approveDeposit')
             ->subject('Whales Corp')
-            ->from('noreply@whalescorp.io');
+            ->from('noreply@ellev8.io');
     }
 }

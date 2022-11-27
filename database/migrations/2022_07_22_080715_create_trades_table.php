@@ -22,12 +22,10 @@ class CreateTradesTable extends Migration
             $table->double('amount');
             $table->string('sl')->nullable();
             $table->string('tp')->nullable();
-            $table->string('leverage')->nullable();
-            $table->integer('execution_time')->nullable();
 
-            $table->integer('percent')->nullable();
             $table->integer('status')->nullable();
-            $table->double('profit')->nullable();
+            $table->integer('expire_time')->nullable();
+            $table->double('profit_loss')->nullable();
         });
     }
 
