@@ -75,7 +75,8 @@
 
     <!-- Logo -->
     <div class="logo-sn ms-d-block-lg" style="background-color:#fff">
-        <a class="pl-0 ml-0 text-center" href="index.php" style="color:White;font-size:20px;font-weight:bolder">
+        <a class="pl-0 ml-0 text-center" href="{{ route('index') }}" style="color:White;font-size:20px;font-weight:bolder">
+            <h3 style="font-weight: bolder; color: black">Ellev8</h3>
 {{--            <img src='https://www.speedexcapitals.net/logo.png' style='width:250px'/>--}}
         </a>
     </div>
@@ -91,7 +92,7 @@
 
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="LIVE-trading.php">
+            <a href="{{ route('user.trade') }}">
                 <span style="color:white"><i class="fa fa-window-maximize" style="font-size:17px"></i>Live Trading</span>
             </a>
         </li>

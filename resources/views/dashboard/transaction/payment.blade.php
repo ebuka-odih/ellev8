@@ -137,7 +137,7 @@
                     <div class="ms-card card-gradient-dark">
                         <div class="ms-card-body">
                             <h1 style="color:white">To Proceed With Other Payment Kindly</h1>
-                            <p>Contact management at <b><span style="background-color:#000000;padding:3.4px;border-radius:4px;font-weight:bolder;color:white">support@speedexcapitals.net</span></b> to deposit your investment<b> <!--via Bitcoin , Ethereum and Other Available Payment Methods--></b>,<br> Thank you.</p>
+                            <p>Contact management at <b><span style="background-color:#000000;padding:3.4px;border-radius:4px;font-weight:bolder;color:white">support@ellev8.io</span></b> to deposit your investment<b> <!--via Bitcoin , Ethereum and Other Available Payment Methods--></b>,<br> Thank you.</p>
                         </div>
                     </div>
                 </div>

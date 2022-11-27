@@ -27,20 +27,30 @@ class TradeController extends Controller
     public function trade()
     {
         $trades = Trade::whereUserId(\auth()->id())->where('status', 0)->latest()->paginate(8);
-        return view('dashboard.trade.trade-room', compact('trades'));
+        return view('dashboard.trade.live-trading', compact('trades'));
     }
 
-    public function placeTrade(Request $request)
+    public function buyOrder(Request $request)
     {
         if ($request->amount < auth()->user()->balance){
             $data = $this->getData($request);
-            if($request->get('type') == 'buy'){
-                $data['type'] = 1;
-                $data['status'] = 0;
-            }else{
-                $data['type'] = 0;
-                $data['status'] = 0;
-            }
+            $data['user_id'] = Auth::id();
+            $data['type'] = $request->order;
+            $trade = Trade::create($data);
+            $user = User::findOrFail($trade->user_id);
+            $user->balance -= $trade->amount;
+            $user->save();
+            return redirect()->back()->with('success', "Your Order Has Been Created");
+        }
+        return redirect()->back()->with('declined', "Insufficient Balance, fund your account to continue");
+
+    }
+
+    public function sellOrder(Request $request)
+    {
+        if ($request->amount < auth()->user()->balance){
+            $data = $this->getData($request);
+            $data['type'] = $request->order;
             $data['user_id'] = Auth::id();
             $trade = Trade::create($data);
             $user = User::findOrFail($trade->user_id);
@@ -48,7 +58,7 @@ class TradeController extends Controller
             $user->save();
             return redirect()->back()->with('success', "Your Order Has Been Created");
         }
-        return redirect()->back()->with('declined', "Insufficient Balance");
+        return redirect()->back()->with('declined', "Insufficient Balance, fund your account to continue");
 
     }
 
@@ -59,8 +69,6 @@ class TradeController extends Controller
           'amount' => 'required',
           'sl' => 'nullable',
           'tp' => 'nullable',
-          'leverage' => 'required',
-          'execution_time' => 'required',
         ];
         return $request->validate($rules);
     }

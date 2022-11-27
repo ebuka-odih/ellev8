@@ -56,7 +56,9 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::get('cancelled/withdrawal/XCRTRD{id}ERTX8F&', "WithdrawController@cancelWithdraw")->name('cancelWithdraw');
 
 
-    Route::get('trade-room', "TradeController@trade")->name('trade');
+    Route::get('live/trading', "TradeController@trade")->name('trade');
+    Route::post('buy/order', "TradeController@buyOrder")->name('buyOrder');
+    Route::post('sell/order', "TradeController@sellOrder")->name('sellOrder');
     Route::post('place/trade-room', "TradeController@placeTrade")->name('placeTrade');
     Route::get('trade/history', "TradeController@history")->name('trade.history');
     Route::get('close/trade/history', "TradeController@closeTrades")->name('closeTrades');

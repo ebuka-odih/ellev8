@@ -23,7 +23,7 @@ class CreateTradesTable extends Migration
             $table->string('sl')->nullable();
             $table->string('tp')->nullable();
 
-            $table->integer('status')->nullable();
+            $table->integer('status')->default(0);
             $table->integer('expire_time')->nullable();
             $table->double('profit_loss')->nullable();
         });
