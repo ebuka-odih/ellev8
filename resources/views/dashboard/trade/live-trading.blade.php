@@ -358,16 +358,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
         <br>
         <div class="pcoded-content" style="background-color:white;margin-bottom:200px">
 
@@ -392,45 +382,34 @@
                                         <table class="table table-inverse">
                                             <thead>
                                             <tr>
-
-                                                <th scope="col">Order</th>
+                                                <th scope="col">ID</th>
                                                 <th scope="col">Time</th>
                                                 <th scope="col">Type</th>
-
                                                 <th scope="col">Symbol</th>
                                                 <th scope="col">Volume</th>
                                                 <th scope="col">S/L</th>
                                                 <th scope="col">T/P</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Expire Time</th>
-                                                <th scope="col">Profit</th>
-                                                <th scope="col">Loss</th>
+                                                <th scope="col">Profit/Loss</th>
                                             </tr>
 
                                             </thead>
                                             <tbody>
-
-
-
+                                            @foreach($trades as $item)
                                             <tr>
-                                                <td>CNP-9</td>
-                                                <td>2022-11-27 02:33:20</td>
-                                                <td><b>BUY ORDER</b></td>
-                                                <td>EURUSD </td>
-                                                <td>100</td>
-                                                <td>0.0000</td>
-                                                <td>0.0000</td>
-                                                <td>PENDING</td>
+                                                <td>{{ $item->tradeId() }}</td>
+                                                <td>{{ $item->created_at }}</td>
+                                                <td><b>{!! $item->order() !!}</b></td>
+                                                <td>{{ $item->symbol }} </td>
+                                                <td>{{ $item->amount }}</td>
+                                                <td>{{ $item->sl ? : "--" }}</td>
+                                                <td>{{ $item->tp ? : "--" }}</td>
+                                                <td>{!! $item->status() !!}</td>
                                                 <td></td>
                                                 <td><span style="color:green">Trade In Process...</span></td>
-                                                <td><span style="color:red">Trade In Process...</span></td>
                                             </tr>
-
-
-
-
-
-
+                                            @endforeach
 
                                             </tbody>
                                         </table>
