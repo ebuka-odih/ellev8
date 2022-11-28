@@ -32,8 +32,6 @@
 <body>
 <!-- Page Container -->
 
-
-
 <div id="page-container" class="sidebar-o sidebar-dark enable-page-overlay side-scroll page-header-fixed main-content-narrow">
     <!-- Side Overlay-->
     <aside id="side-overlay">
@@ -43,14 +41,13 @@
                 <div class="content-header">
                     <!-- User Avatar -->
                     <a class="img-link me-1" href="">
-                        <img class="img-avatar img-avatar48" src="assets/media/avatars/avatar10.jpg" alt="">
+                        <img class="img-avatar img-avatar48" src="{{ asset('assets/media/avatars/avatar10.jpg') }}" alt="">
                     </a>
                     <!-- END User Avatar -->
 
                     <!-- User Info -->
                     <div class="ms-2">
                         <a class="text-white fw-semibold" href="">{{ auth()->user()->fullname() }}</a>
-                        <div class="text-white-75 fs-sm">Full Stack Developer</div>
                     </div>
                     <!-- END User Info -->
 

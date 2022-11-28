@@ -63,7 +63,7 @@ class SubscriptionController extends Controller
         $rules = [
             'name' => 'required',
             'amount' => 'required',
-            'term_days' => 'required',
+            'leverage' => 'required',
             'total_return' => 'required',
         ];
         return $request->validate($rules);

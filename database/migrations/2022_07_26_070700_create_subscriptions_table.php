@@ -18,7 +18,7 @@ class CreateSubscriptionsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->double('amount');
-            $table->string('term_days');
+            $table->string('leverage');
             $table->string('total_return');
         });
     }

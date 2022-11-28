@@ -40,8 +40,8 @@
                                         <input type="text" class="form-control" id="example-text-input" name="name" >
                                     </div>
                                     <div class="mb-4 col-lg-6">
-                                        <label class="form-label" for="example-email-input">Term Days</label>
-                                        <input type="number" class="form-control" id="example-email-input" name="term_days" >
+                                        <label class="form-label" for="example-email-input">Leverage</label>
+                                        <input type="number" class="form-control" id="example-email-input" name="leverage" >
                                     </div>
                                 </div>
                                 <div class="row">
@@ -80,7 +80,7 @@
                         <tr>
                             <th class="text-center" style="width: 50px;">#</th>
                             <th>Name</th>
-                            <th>Term Days </th>
+                            <th>Leverage </th>
                             <th>Total Return </th>
                             <th>Amount</th>
                             <th class="text-center" style="width: 100px;">Actions</th>
@@ -94,7 +94,7 @@
                                     {{ $item->name }}
                                 </td>
                                 <td class="fw-semibold">
-                                    {{ $item->term_days }} Day(s)
+                                   1:{{ $item->leverage }}
                                 </td>
                                 <td class="fw-semibold">
                                     {{ $item->total_return }}%

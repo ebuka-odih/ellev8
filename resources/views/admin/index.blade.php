@@ -98,7 +98,7 @@
                             @foreach($users as $item)
                             <tr>
                                 <td>
-                                    <span class="fw-semibold">{{ $item->fullname() }}</span>
+                                    <span class="fw-semibold">{{ $item->name }}</span>
                                 </td>
                                 <td class="d-none d-xl-table-cell">
                                     <span class="fs-sm text-muted">{{ date('M Y d', strtotime($item->created_at )) }}</span>

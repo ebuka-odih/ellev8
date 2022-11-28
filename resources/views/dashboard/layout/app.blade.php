@@ -99,7 +99,7 @@
 
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="signal.php">
+            <a href="{{ route('user.sub.plans') }}">
                 <span style="color:white"><i class="fa fa-window-maximize" style="font-size:17px"></i>Live Trading Signals</span>
             </a>
         </li>

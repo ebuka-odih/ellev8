@@ -63,7 +63,7 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::get('trade/history', "TradeController@history")->name('trade.history');
     Route::get('close/trade/history', "TradeController@closeTrades")->name('closeTrades');
 
-    Route::get('subscription/plans', "SubscribeController@plans")->name('sub.plans');
+    Route::get('signals', "SubscribeController@plans")->name('sub.plans');
     Route::get('subscription/history', "SubscribeController@history")->name('sub.history');
     Route::get('subscription/details/{id}', "SubscribeController@details")->name('sub.details');
     Route::post('process/subscription/plans', "SubscribeController@subscribe")->name('subscribe');
