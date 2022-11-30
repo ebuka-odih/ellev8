@@ -17,7 +17,7 @@
             <div class="col-xl-12 col-md-12" style="margin-top:20px">
                 <div class="ms-panel ms-panel-fh">
                     <div class="ms-panel-header">
-                        <h3>Ellev8 - Signal Packages List</h3>
+                        <h3>Ellev8 - Signal Packages Details</h3>
                     </div>
 
                     <div class="ms-panel-body">

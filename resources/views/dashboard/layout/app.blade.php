@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/flaticon.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/cryptocoins.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/cryptocoins-colors.css') }}">
+    <link href="https://home.speedexcapitals.net/speedexcapitals/Dashboard/vendors/iconic-fonts/font-awesome/css/all.min.css" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!-- jQuery UI -->
@@ -85,7 +87,7 @@
     <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion" style="background-color:#274E82">
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="{{ route('index') }}">
+            <a href="{{ route('user.dashboard') }}">
                 <span style="color:white"><i class="fa fa-home" style="font-size:17px"></i>Dashboard</span>
             </a>
         </li>
@@ -107,7 +109,7 @@
 
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="account.php">
+            <a href="{{ route('user.profile') }}">
                 <span style="color:white"><i class="fa fa-user-circle" style="font-size:17px"></i>Account Profile</span>
             </a>
         </li>
@@ -120,13 +122,13 @@
 
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="tradehistory.php">
+            <a href="{{ route('user.trade.history') }}">
                 <span style="color:white"><i class="fa fa-history" style="font-size:17px"></i>  Trade History</span>
             </a>
         </li>
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="withdraw.php">
+            <a href="{{ route('user.withdraw') }}">
                 <span style="color:white"><i class="fa fa-suitcase" style="font-size:17px"></i>  Withdrawals</span>
             </a>
         </li>

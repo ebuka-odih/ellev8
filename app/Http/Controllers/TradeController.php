@@ -13,8 +13,8 @@ class TradeController extends Controller
     {
         $counts = Trade::whereUserId(\auth()->id())->where('status', 0)->count();
         $close_counts = Trade::whereUserId(\auth()->id())->where('status', 1)->count();
-        $trades = Trade::whereUserId(\auth()->id())->where('status', 0)->latest()->paginate(12);
-        return view('dashboard.trade.history', compact('trades', 'counts', 'close_counts'));
+        $trades = Trade::whereUserId(\auth()->id())->where('status', 1)->latest()->paginate(12);
+        return view('dashboard.trade.tradehistory', compact('trades', 'counts', 'close_counts'));
     }
 
     public function closeTrades()

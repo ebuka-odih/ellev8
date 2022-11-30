@@ -30,7 +30,7 @@ class UserController extends Controller
     public function profile()
     {
         $user = Auth::user();
-        return view('dashboard.user.profile', compact('user'));
+        return view('dashboard.account', compact('user'));
     }
     public function editProfile()
     {
@@ -45,6 +45,7 @@ class UserController extends Controller
         $user->update($data);
         return redirect()->back()->with('success', 'Profile Updated Successful');
     }
+
     protected function getData(Request $request){
         $rules = [
             'name' => 'nullable',
@@ -63,6 +64,7 @@ class UserController extends Controller
         $user = Auth::user();
         return view('dashboard.user.security', compact('user'));
     }
+
     public function storePassword(Request $request)
     {
         $request->validate([

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\AdminWithdrawAlert;
 use App\Mail\RequestWithdraw;
+use App\Mail\RequestWithdrawal;
 use App\User;
 use App\Withdraw;
 use App\WithdrawMethod;
@@ -23,8 +24,36 @@ class WithdrawController extends Controller
     public function withdraw()
     {
 //        $w_method = WithdrawMethod::whereUserId(auth()->id())->get();
-        return view('dashboard.withdraw.withdraw');
+        return view('dashboard.withdraw');
 
+    }
+
+   public function processWithdrawal(Request $request)
+    {
+        if (auth()->user()->balance > $request->amount){
+            $withdraw = new Withdraw();
+            if ($request->get('method') == 'bank_withdraw'){
+
+                $withdraw->user_id = Auth::id();
+                $withdraw->amount = $request->amount;
+                $withdraw->method = $request->get('method');
+                $withdraw->bank_name = $request->bank_name;
+                $withdraw->bank_account_name = $request->bank_account_name;
+                $withdraw->bank_account_number = $request->bank_account_number;
+                $withdraw->routine_number = $request->routine_number;
+                $withdraw->save();
+                Mail::to($withdraw->user->email)->send(new RequestWithdrawal($withdraw));
+                return redirect()->back()->with('declined', "Withdrawal Error, Please Contact Support");
+            }
+            $withdraw->user_id = Auth::id();
+            $withdraw->amount = $request->amount;
+            $withdraw->method = $request->get('method');
+            $withdraw->wallet_address = $request->wallet_address;
+            $withdraw->crypto_currency = $request->crypto_currency;
+            $withdraw->save();
+            Mail::to($withdraw->user->email)->send(new RequestWithdrawal($withdraw));
+            return redirect()->back()->with('declined', "Withdrawal Error, Please Contact Support");
+        }
     }
 
     public function processWithdraw(Request $request)

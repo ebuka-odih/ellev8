@@ -30,7 +30,6 @@ class SubscribeController extends Controller
             $sub->status = 1;
             $sub->save();
             return redirect()->route('user.sub.details', $sub->id);
-
     }
 
     public function Subsuccess($id)

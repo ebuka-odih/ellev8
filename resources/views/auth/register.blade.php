@@ -87,8 +87,17 @@
                         </div>
                         <div class="row" >
                             <div class="col-xs-12 col-sm-12">
-                                <form name="signupForm" class="signupForm" action="{{ route('login') }}" method="POST">
+                                <form name="signupForm" class="signupForm" action="{{ route('register') }}" method="POST">
                                     @csrf
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     <div class="form-group wrap-input">
                                         <input type="text" class="form-control" name="name" placeholder="Full name" >
                                         <span class="focus-input"></span>
