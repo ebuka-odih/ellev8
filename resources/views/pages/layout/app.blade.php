@@ -160,7 +160,10 @@
     </script>
 
 
-    <script async src="{{ asset('assets/home/cdn-cgi/bm/cv/669835187/api.html') }}"></script></head>
+    <script async src="{{ asset('assets/home/cdn-cgi/bm/cv/669835187/api.html') }}"></script>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3285221-ddb7-45a1-bff2-3dc0b26ab4cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
+</head>
 <body class="home page-template page-template-template_home page-template-template_home-php page page-id-5">
 
 <div class="wrapper">

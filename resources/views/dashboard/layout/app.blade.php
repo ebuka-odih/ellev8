@@ -36,6 +36,8 @@
           integrity="sha512-PvB3Q4vTvWD/9aiiELYI3uebup/4mtou3Mc/uGudC/Zl+C9BdKUkAI+5jORfA+fvLK4DpzC5VyEN7P2kK43hjg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3285221-ddb7-45a1-bff2-3dc0b26ab4cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 </head>
 
 <body class="ms-body ms-aside-left-open ms-primary-theme ms-has-quickbar">
