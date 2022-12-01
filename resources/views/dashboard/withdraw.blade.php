@@ -27,10 +27,6 @@
 
 
 
-
-
-
-
             <div class="col-xl-12 col-md-12" style="margin-top:20px">
                 <form method="post" action="" style="background-color:#262626; padding:20px; margin-top:10px;border-radius:10px">
                     <div class="sign-u">

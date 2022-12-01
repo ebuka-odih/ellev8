@@ -648,7 +648,7 @@
                     <strong>Fast & Easy</strong>
                     <span>Account Opening</span>
                 </div>
-                <a class="get_started_link" href="register">get started</a>
+                <a class="get_started_link" href="{{ route('register') }}">get started</a>
                 <div class="clear"></div>
             </div>
         </div></div>

@@ -50,7 +50,7 @@
 
 
 <!-- Preloader -->
-<div id="preloader-wrap" style="background-color:#274E82">
+<div id="preloader-wrap" style="background-color:#124b31">
 
     <div class="spinner spinner-8">
 
@@ -75,18 +75,18 @@
 <div class="ms-aside-overlay ms-overlay-right ms-toggler" data-target="#ms-recent-activity" data-toggle="slideRight"></div>
 
 <!-- Sidebar Navigation Left -->
-<aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left"  style="background-color:#274E82">
+<aside id="ms-side-nav" class="side-nav fixed ms-aside-scrollable ms-aside-left"  style="background-color:124b31">
 
     <!-- Logo -->
     <div class="logo-sn ms-d-block-lg" style="background-color:#fff">
         <a class="pl-0 ml-0 text-center" href="{{ route('index') }}" style="color:White;font-size:20px;font-weight:bolder">
-            <h3 style="font-weight: bolder; color: black">Ellev8</h3>
+            <h3 style="font-weight: bolder; color: #124b31">Ellev8</h3>
 {{--            <img src='https://www.speedexcapitals.net/logo.png' style='width:250px'/>--}}
         </a>
     </div>
 
     <!-- Navigation -->
-    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion" style="background-color:#274E82">
+    <ul class="accordion ms-main-aside fs-14" id="side-nav-accordion" style="background-color:#124b31">
 
         <li class="menu-item" style="padding-bottom:8px">
             <a href="{{ route('user.dashboard') }}">

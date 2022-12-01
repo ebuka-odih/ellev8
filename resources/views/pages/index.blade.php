@@ -550,7 +550,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/activity/access-restricted/"
+                href="{{ route('login') }}"
                 data-title="Community Hub"
             >
 
@@ -567,7 +567,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/groups/"
+                href="{{ route('login') }}"
                 data-title="Groups"
             >
 
@@ -584,7 +584,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/forums/"
+                href="{{ route('login') }}"
                 data-title="Forums"
             >
 
@@ -601,7 +601,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/forex-academy/"
+                href="{{ route('login') }}"
                 data-title="Forex Academy"
             >
 
@@ -618,7 +618,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/crypto-academy/"
+                href="{{ route('login') }}"
                 data-title="Crypto Academy"
             >
 
@@ -635,7 +635,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/position-calc/"
+                href="{{ route('login') }}"
                 data-title="Tools &amp; Resources"
             >
 
@@ -652,7 +652,7 @@
         <li class="menu-item ">
             <!-- MENU ITEM LINK -->
             <a  class="menu-item-link "
-                href="https://hub.ellev8.com/events"
+                href="{{ route('login') }}"
                 data-title="Calendar"
             >
 
@@ -666,7 +666,8 @@
         </li>
         <!-- /MENU ITEM -->
     </ul>
-    <!-- /MENU --></nav>
+    <!-- /MENU -->
+</nav>
 <!-- /NAVIGATION WIDGET -->
 
 <!-- NAVIGATION WIDGET -->
@@ -706,7 +707,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/activity/access-restricted/"
+                    href="{{ route('login') }}"
                     data-title="Community Hub"
                 >
 
@@ -723,7 +724,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/groups/"
+                    href="{{ route('login') }}"
                     data-title="Groups"
                 >
 
@@ -740,7 +741,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/forums/"
+                    href="{{ route('login') }}"
                     data-title="Forums"
                 >
 
@@ -757,7 +758,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/forex-academy/"
+                    href="{{ route('login') }}"
                     data-title="Forex Academy"
                 >
 
@@ -774,7 +775,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/crypto-academy/"
+                    href="{{ route('login') }}"
                     data-title="Crypto Academy"
                 >
 
@@ -791,7 +792,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/position-calc/"
+                    href="{{ route('login') }}"
                     data-title="Tools &amp; Resources"
                 >
 
@@ -808,7 +809,7 @@
             <li class="menu-item ">
                 <!-- MENU ITEM LINK -->
                 <a  class="menu-item-link "
-                    href="https://hub.ellev8.com/events"
+                    href="{{ route('login') }}"
                     data-title="Calendar"
                 >
 
@@ -838,7 +839,7 @@
             <!-- NAVIGATION WIDGET SECTION MENU ITEM -->
             <li class="navigation-widget-section-menu-item">
                 <!-- NAVIGATION WIDGET SECTION MENU ITEM LINK -->
-                <a class="navigation-widget-section-menu-item-link" href="https://hub.ellev8.com/">Home</a>
+                <a class="navigation-widget-section-menu-item-link" href="{{ route('index') }}">Home</a>
                 <!-- /NAVIGATION WIDGET SECTION MENU ITEM LINK -->
 
             </li>
@@ -877,7 +878,8 @@
             <!-- /NAVIGATION WIDGET SECTION MENU ITEM -->
         </ul>
         <!-- /NAVIGATION WIDGET SECTION MENU --></div>
-    <!-- /NAVIGATION WIDGET SECTION --></nav>
+    <!-- /NAVIGATION WIDGET SECTION -->
+</nav>
 <!-- /NAVIGATION WIDGET -->
 
 <!-- HEADER -->
@@ -885,7 +887,7 @@
     <!-- HEADER ACTIONS -->
     <div class="header-actions header-actions-full">
         <!-- LOGO -->
-        <a href="https://hub.ellev8.com/" class="logo logo-encased">
+        <a href="{{ route('index') }}" class="logo logo-encased">
             <!-- LOGO IMAGE -->
             <img class="logo-image" src="https://hub.ellev8.com/wp-content/uploads/2022/05/cropped-xsmallLogo.png" alt="logo">
             <!-- /LOGO IMAGE -->
@@ -930,7 +932,7 @@
                 <!-- MENU MAIN ITEM -->
                 <li class="menu-main-item">
                     <!-- MENU MAIN ITEM LINK -->
-                    <a class="menu-main-item-link" href="https://hub.ellev8.com/" >
+                    <a class="menu-main-item-link" href="{{ route('index') }}" >
                         Home      </a>
                     <!-- /MENU MAIN ITEM LINK -->
                 </li>
@@ -972,7 +974,8 @@
             </ul>
             <!-- /MENU MAIN -->
         </nav>
-        <!-- /NAVIGATION -->  </div>
+        <!-- /NAVIGATION -->
+    </div>
     <!-- /HEADER ACTIONS -->
 
 
@@ -981,11 +984,11 @@
     <div class="header-actions">
 
         <!-- BUTTON -->
-        <a class="button register-button" href="https://hub.ellev8.com/register/">Register</a>
+        <a class="button register-button" href="{{ route('register') }}">Register</a>
         <!-- /BUTTON -->
 
         <!-- BUTTON -->
-        <a class="button primary login-button" href="https://hub.ellev8.com/wp-login.php">Login</a>
+        <a class="button primary login-button" href="{{ route('login') }}">Login</a>
         <!-- /BUTTON -->
     </div>
     <!-- /HEADER ACTIONS -->
@@ -1070,7 +1073,7 @@
                     <div class="elementor-element elementor-element-f587e5e elementor-widget elementor-widget-button" data-id="f587e5e" data-element_type="widget" data-widget_type="button.default">
                         <div class="elementor-widget-container">
                             <div class="elementor-button-wrapper">
-                                <a href="https://poweredbyigo.com/ellev8" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                <a href="{{ route('login') }}" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">I WANT TO LEARN TO TRADE FROM THE EXPERTS</span>
 		</span>
@@ -1317,7 +1320,7 @@
                     </div>
                     <div class="elementor-element elementor-element-a0678eb elementor-widget elementor-widget-text-editor" data-id="a0678eb" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <h5 class="font_5">Live classes<br />every week</h5>						</div>
+                            <h5 class="font_5">Best trading techniques and strategies</h5>						</div>
                     </div>
                     <div class="elementor-element elementor-element-d1eecfb elementor-widget elementor-widget-eael-divider" data-id="d1eecfb" data-element_type="widget" data-widget_type="eael-divider.default">
                         <div class="elementor-widget-container">
@@ -1351,11 +1354,11 @@
                 <div class="elementor-widget-wrap elementor-element-populated">
                     <div class="elementor-element elementor-element-5435f2c elementor-widget elementor-widget-text-editor" data-id="5435f2c" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <p>50</p>						</div>
+                            <p>190+</p>						</div>
                     </div>
                     <div class="elementor-element elementor-element-6ca6e28 elementor-widget elementor-widget-text-editor" data-id="6ca6e28" data-element_type="widget" data-widget_type="text-editor.default">
                         <div class="elementor-widget-container">
-                            <h5 class="font_5">Hours of video<br />every week</h5>						</div>
+                            <h5 class="font_5">Countries served</h5>						</div>
                     </div>
                     <div class="elementor-element elementor-element-e05d316 elementor-widget elementor-widget-eael-divider" data-id="e05d316" data-element_type="widget" data-widget_type="eael-divider.default">
                         <div class="elementor-widget-container">
@@ -1427,7 +1430,7 @@
                     <div class="elementor-element elementor-element-166da27 elementor-widget elementor-widget-button" data-id="166da27" data-element_type="widget" data-widget_type="button.default">
                         <div class="elementor-widget-container">
                             <div class="elementor-button-wrapper">
-                                <a href="https://poweredbyigo.com/ellev8" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                <a href="{{ route('login') }}" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">I'M READY TO CREATE MY FUTURE</span>
 		</span>
@@ -2756,7 +2759,7 @@
                                                                         <div class="elementor-element elementor-element-297c1c6 elementor-align-center elementor-widget elementor-widget-button" data-id="297c1c6" data-element_type="widget" data-widget_type="button.default">
                                                                             <div class="elementor-widget-container">
                                                                                 <div class="elementor-button-wrapper">
-                                                                                    <a href="https://www.ellev8.com/exccelr8" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                                                                    <a href="{{ route('login') }}" target="_blank" class="elementor-button-link elementor-button elementor-size-md" role="button">
 						<span class="elementor-button-content-wrapper">
 						<span class="elementor-button-text">GET THE EX8 APP NOW</span>
 		</span>
