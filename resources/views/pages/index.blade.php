@@ -425,6 +425,8 @@
     <style type="text/css" id="wp-custom-css">
 
     </style>
+    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3285221-ddb7-45a1-bff2-3dc0b26ab4cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 </head>
 <body class="home-page bp-legacy home page-template-default page page-id-7166 wp-custom-logo pmpro-body-has-access tutor-lms tribe-no-js vikinger-logged-out elementor-default elementor-kit-27 elementor-page elementor-page-7166 no-js tribe-theme-vikinger">
 

@@ -36,7 +36,6 @@
           integrity="sha512-PvB3Q4vTvWD/9aiiELYI3uebup/4mtou3Mc/uGudC/Zl+C9BdKUkAI+5jORfA+fvLK4DpzC5VyEN7P2kK43hjg=="
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3285221-ddb7-45a1-bff2-3dc0b26ab4cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 </head>
 
@@ -136,7 +135,7 @@
         </li>
 
         <li class="menu-item" style="padding-bottom:8px">
-            <a href="support.php">
+            <a href="{{ route('user.support') }}">
                 <span style="color:white"><i class="fa fa-envelope" style="font-size:17px"></i> Our Support</span>
             </a>
         </li>
@@ -206,7 +205,15 @@
                     <li class="dropdown-divider"></li>
 
                     <li class="dropdown-menu-footer">
-                        <a class="media fs-14 p-2" href="../index.php?log=1"> <span><i class="flaticon-shut-down mr-2"></i> Logout</span> </a>
+                        <a class="media fs-14 p-2" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                            <span><i class="fa fa-power-off"></i> {{ __('Logout') }}</span>
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
                     </li>
                 </ul>
             </li>
@@ -243,6 +250,7 @@
 <!-- MODALS -->
 
 
+<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="f3285221-ddb7-45a1-bff2-3dc0b26ab4cb";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 
 <!-- SCRIPTS -->

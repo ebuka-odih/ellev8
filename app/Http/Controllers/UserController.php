@@ -77,6 +77,10 @@ class UserController extends Controller
         return redirect()->back()->with('success', "Password Changed Successfully");
     }
 
+    public function support()
+    {
+        return view('dashboard.support');
+    }
 
 
 }

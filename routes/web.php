@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'user', 'as' => 'user.'], fu
     Route::patch('update/profile', 'UserController@updateProfile')->name('updateProfile');
     Route::get('edit/profile', 'UserController@editProfile')->name('editProfile');
 
+    Route::get('support', 'UserController@support')->name('support');
+
     Route::get('security', 'UserController@security')->name('security');
     Route::post('update/security', "UserController@updateSecurity")->name('updateSecurity');
     Route::get('account', 'WithdrawMethodController@create')->name('account');
