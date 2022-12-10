@@ -275,7 +275,7 @@
 
 <!-- Settings -->
 <script src="{{ asset('assets/js/settings.js') }}"></script>
-
+<script src="//code.tidio.co/9jsismcgiwy2oyimlifzunzvg1dusuob.js" async></script>
 </body>
 
 </html>
